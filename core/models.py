@@ -18,3 +18,6 @@ class Evento(models.Model):
     #para exibir o nome do titulo no evento e não evento_object1
     def __str__(self):
         return self.titulo
+
+    def get_data_criacao(self):
+        return self.data_criacao.strftime('%d / %m / %Y %H:%M Hrs')
