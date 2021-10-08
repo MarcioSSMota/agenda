@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/',views.lista_eventos), #chamar aqui a nova visão
     #path('', views.index) #se for a raiz direcionar para a agenda...pode usar esse ou o abaixo
-    path('', RedirectView.as_view(url='/agenda/')) #se for a raiz direcionar para a agenda
+    path('', RedirectView.as_view(url='/agenda/')), #se for a raiz direcionar para a agenda
+    path('login/', views.login_user),
+    path('login/submit', views.submit_login),
+    path('logout/', views.logout_user),
 ]
