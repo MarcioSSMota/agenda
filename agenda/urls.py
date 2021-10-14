@@ -23,6 +23,8 @@ urlpatterns = [
     path('agenda/',views.lista_eventos), #chamar aqui a nova visão
     #path('', views.index) #se for a raiz direcionar para a agenda...pode usar esse ou o abaixo
     path('', RedirectView.as_view(url='/agenda/')), #se for a raiz direcionar para a agenda
+    path('agenda/evento/',views.evento),
+    path('agenda/evento/submit',views.submit_evento), #nova rota para o botão Salvar
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user),
