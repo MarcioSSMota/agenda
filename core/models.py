@@ -10,6 +10,7 @@ class Evento(models.Model):
     data_evento = models.DateTimeField(verbose_name='Data do Evento')
     data_criacao = models.DateTimeField(auto_now=True) #insere automaticamente a data/hora da criação
     usuario = models.ForeignKey(User, on_delete=models.CASCADE) #utilizar aqui a User
+    local_evento = models.TextField(blank=True, null=True)
 
     # para criar a tabela com o nome abaixo e não com o default que o Python cria que será core_evento
     class Meta:
