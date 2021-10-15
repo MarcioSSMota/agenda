@@ -21,6 +21,7 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/',views.lista_eventos), #chamar aqui a nova visão
+    path('agenda/lista/', views.json_lista_eventos), #utilizar json
     #path('', views.index) #se for a raiz direcionar para a agenda...pode usar esse ou o abaixo
     path('', RedirectView.as_view(url='/agenda/')), #se for a raiz direcionar para a agenda
     path('agenda/evento/',views.evento),
