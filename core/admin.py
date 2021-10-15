@@ -5,7 +5,7 @@ from core.models import Evento #importar a nova classe eventos criada no models.
 
 #exibir mais
 class EventoAdmin(admin.ModelAdmin):
-    list_display = ('titulo','data_evento')
+    list_display = ('id','titulo','data_evento')
     list_filter = ('usuario', 'titulo',) #virgula tem q estar no final
 
 #registrar a nova classe eventos criada no models.py

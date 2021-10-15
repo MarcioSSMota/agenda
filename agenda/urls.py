@@ -25,6 +25,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/agenda/')), #se for a raiz direcionar para a agenda
     path('agenda/evento/',views.evento),
     path('agenda/evento/submit',views.submit_evento), #nova rota para o botão Salvar
+    path('agenda/evento/delete/<int:id_evento>/', views.delete_evento), #nova rota para exclusão do evento pela passagem de parametro pelo id_evento
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user),
